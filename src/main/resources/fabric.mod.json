@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "diabetes",
+  "version": "${version}",
+  "name": "diabetes",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/diabetes/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.rhettcarver.diabetes.client.DiabetesDataGenerator"
+    ],
+    "client": [
+      "com.rhettcarver.diabetes.client.DiabetesClient"
+    ],
+    "main": [
+      "com.rhettcarver.diabetes.Diabetes"
+    ]
+  },
+  "mixins": [
+    "diabetes.mixins.json",
+    {
+      "config": "diabetes.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
