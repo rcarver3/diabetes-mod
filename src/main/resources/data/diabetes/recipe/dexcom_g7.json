@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SIS",
+    "IRI",
+    "SIS"
+  ],
+  "key": {
+    "I": "minecraft:iron_ingot",
+    "R": "minecraft:redstone",
+    "S": "minecraft:sugar"
+  },
+  "result": {
+    "id": "diabetes:dexcom_g7"
+  },
+  "group": "Redstone"
+}

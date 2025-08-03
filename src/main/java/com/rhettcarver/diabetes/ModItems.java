@@ -14,6 +14,7 @@ import java.util.function.Function;
 
 public class ModItems {
     public static final Item DEXCOM_G7 = register("dexcom_g7", Item::new, new Item.Settings());
+    public static final Item TANDEM_MOBI = register("tandem_mobi", Item::new, new Item.Settings());
 
     /**
      * @param name The name of the item to create
@@ -32,7 +33,9 @@ public class ModItems {
     }
 
     public static void initialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE)
                 .register((itemGroup) -> itemGroup.add(ModItems.DEXCOM_G7));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE)
+                .register((itemGroup) -> itemGroup.add(ModItems.TANDEM_MOBI));
     }
 }
